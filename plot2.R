@@ -12,8 +12,11 @@ read_data2 <- function(file = file_name){
 
 gap_per_min <- read_data2()
 
+# plot 
 par(pty="s", cex = 0.70)
 with(gap_per_min, plot(Datetime, Global_active_power, type = "l", 
                       xlab = "", ylab = "Global Active Power (kilowatts)"))
+
+# create file
 dev.copy(png, file = "plot2.png")
 dev.off()

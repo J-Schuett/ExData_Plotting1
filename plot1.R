@@ -10,8 +10,11 @@ read_data1 <- function(file = file_name){
 
 gap <- read_data1()
 
+# plot
 par(pty="s", cex = 0.70)
 hist(gap, col = "red", main = "Global Active Power", 
      xlab = "Global Active Power (kilowatts)", ylab = "Frequency")
+
+# create file
 dev.copy(png, file = "plot1.png")
 dev.off()

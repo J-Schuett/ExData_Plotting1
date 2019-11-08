@@ -38,6 +38,8 @@ legend("topright", legend = c("Sub_metering_1","Sub_metering_2","Sub_metering_3"
 # Plot 4
 with(data, plot(Datetime, Global_reactive_power, type = "l", 
                 xlab = "datetime", ylab = "Global_reactive_power"))
+
+# create file
 dev.copy(png, file = "plot4.png")
 dev.off()
 
